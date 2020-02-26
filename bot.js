@@ -1,6 +1,7 @@
 require('dotenv').config();
 const Telegraf = require('telegraf');
 const express = require('express');
+const wordEndings = require('./wordEndings');
 
 const expressApp = express();
 const port = process.env.PORT || 3000;
@@ -14,44 +15,7 @@ expressApp.listen(port, () => {
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-const ends = [
-    'ли',
-    'ла',
-    'ло',
-    'ил',
-    'ел',
-    'ёл',
-    'ал',
-    'ял',
-    'ит',
-    'ет',
-    'ёт',
-    'ят',
-    'ут',
-    'ют',
-    'тся',
-    'ись',
-    'лся',
-    'лись',
-    'лась',
-    'лось',
-    'мер',
-    'ёр',
-    'дор',
-    'доры',
-    'дорасы',
-    'дарасы',
-    'уй',
-    'да',
-    'уто',
-    'ута',
-    'уты',
-    'ут',
-    'оз',
-    'ос',
-];
-
-const regex = new RegExp(`(${ends.join('|')})$`);
+const regex = new RegExp(`(${wordEndings.join('|')})$`);
 
 bot.start((ctx) => {
     console.log('Started', ctx.from.id);
