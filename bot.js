@@ -47,6 +47,8 @@ const ends = [
     'ута',
     'уты',
     'ут',
+    'оз',
+    'ос',
 ];
 
 const regex = new RegExp(`(${ends.join('|')})$`);
@@ -57,7 +59,7 @@ bot.start((ctx) => {
 
 bot.on('text', (ctx) => {
     const words = ctx.message.text
-        .match(/[а-я]+/ig)
+        .match(/[Нн][Ее] [а-я]+|[а-я]+/ig)
         .map(word => word.toLowerCase())
         .filter(word => regex.test(word));
     if (words.length === 0) return;
