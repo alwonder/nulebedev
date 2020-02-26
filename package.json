@@ -8,10 +8,6 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "fs": "0.0.1-security",
-    "https-proxy-agent": "^5.0.0",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.5",
     "telegraf": "^3.36.0"
   },
   "devDependencies": {},
