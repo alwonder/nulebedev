@@ -42,6 +42,10 @@ const ends = [
     'дарасы',
     'уй',
     'да',
+    'уто',
+    'ута',
+    'уты',
+    'ут',
 ];
 
 const regex = new RegExp(`(${ends.join('|')})$`);
@@ -63,6 +67,7 @@ bot.on('text', (ctx) => {
         source: './umer.jpg',
     }, {
         caption: `Ну ${randomWord} и ${randomWord}`,
+        reply_to_message_id: ctx.message.message_id,
     });
 });
 
