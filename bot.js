@@ -3,15 +3,15 @@ const Telegraf = require('telegraf');
 const express = require('express');
 const wordEndings = require('./wordEndings');
 
-const expressApp = express();
-const port = process.env.PORT || 3000;
+// const expressApp = express();
+// const port = process.env.PORT || 3000;
 
-expressApp.get('/', (req, res) => {
-    res.send('foo');
-});
-expressApp.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
+// expressApp.get('/', (req, res) => {
+//     res.send('foo');
+// });
+// expressApp.listen(port, () => {
+//     console.log(`Listening on port ${port}`);
+// });
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
