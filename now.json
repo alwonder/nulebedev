@@ -1,0 +1,10 @@
+{
+  "build": {
+    "env": {
+      "BOT_TOKEN": "1073670369:AAF7mIOKhOaEsspJJKvAP4PQr5xlwvWlcnA"
+    }
+  },
+  "builds": [
+    { "src": "index.js", "use": "@now/node-server" }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "name": "nulebedev",
   "version": "1.0.0",
-  "description": "",
-  "main": "bot.js",
+  "description": "A telegram bot",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -12,6 +12,9 @@
     "telegraf": "^3.36.0"
   },
   "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "author": "alwonder",
+  "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  }
 }
